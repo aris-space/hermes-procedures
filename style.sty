@@ -1,0 +1,31 @@
+% style.sty
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[table]{xcolor} % Added for row coloring
+\usepackage{boldline} % Added for having Bold boarder around table
+\usepackage{makecell}
+\usepackage{array,multirow}
+
+% Page layout
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+% Title formatting
+\titleformat{\section}{\Large\bfseries}{}{0em}{}
+
+% Column centering for the boxes
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% Create a counter for indexing tables
+\newcounter{itemno}
+
+% Custom command for Tab
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+% Define row colors
+\rowcolors{2}{blue!10}{white}
