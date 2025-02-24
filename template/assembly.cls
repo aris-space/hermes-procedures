@@ -7,7 +7,7 @@
 \def\maketitle{
     \begin{center}
         % Left Logo
-        \includegraphics[height=3cm]{Hermes_Logo2Aris.png}\hfill
+        \includegraphics[height=3cm]{global-assets/Hermes_Logo2Aris.png}\hfill
         % Title
         \large \textbf{HER\_[XXX]\_[ProcedureName]\_[00X]}
         % Right Logo
@@ -27,8 +27,14 @@
 }
 \makeatother
 
+% Command to add a row to a table
+\newcommand{\addrow}[4]{%
+    \stepcounter{itemno} \arabic{itemno} & #1 & #2 & $\square$ & #3 \\ 
+    \hline
+}
+
 % Custom table for Tools
-\newcommand{\toolstable}{
+\newcommand{\toolstable}{%
     \setcounter{itemno}{0} % Reset counter
     \begin{longtable}{|c|p{7cm}|p{2cm}|C{1.1cm}|p{4cm}|}
         \hlineB{3}
@@ -36,89 +42,36 @@
         \hline
         \rowcolor{gray!25}\footnotesize{\#} & \footnotesize{Name} & \footnotesize{Amount} & \footnotesize{Done} & \footnotesize{Comments} \\
         \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
+        \input{Inc/tools.tex} % Include content from external file
         \hlineB{3}
     \end{longtable}
 }
 
 % Custom table for Materials
-\newcommand{\materialstable}{
+\newcommand{\materialstable}{%
     \setcounter{itemno}{0} % Reset counter
     \begin{longtable}{|c|p{7cm}|p{2cm}|C{1.1cm}|p{4cm}|}
         \hlineB{3}
-        \rowcolor{blue!50}\multicolumn{5}{|c|}{\textbf{Materials}}\\
+        \rowcolor{blue!50}\multicolumn{5}{|c|}{\textbf{Tools}}\\
         \hline
         \rowcolor{gray!25}\footnotesize{\#} & \footnotesize{Name} & \footnotesize{Amount} & \footnotesize{Done} & \footnotesize{Comments} \\
         \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} &  &  & $\square$ &  \\
+        \input{Inc/materials.tex} % Include content from external file
         \hlineB{3}
     \end{longtable}
 }
 
-% Custom table for Execution
-\newcommand{\executiontable}{
+
+% Execution Table
+\newcommand{\executiontable}{%
     \setcounter{itemno}{0} % Reset counter
     \begin{longtable}{|c|p{7cm}|p{2cm}|C{1.1cm}|p{4cm}|}
         \hlineB{3}
         \rowcolor{blue!50}\multicolumn{5}{|c|}{\textbf{Execution}}\\
         \hline
-        \rowcolor{gray!25}\footnotesize{\#} & \footnotesize{Task} & \footnotesize{Specs}&\footnotesize{Done} & \footnotesize{Comments} \\
+        \rowcolor{gray!25}\footnotesize{\#} & \footnotesize{Task} & \footnotesize{Specs} & \footnotesize{Done} & \footnotesize{Comments} \\
         \hline
-        \stepcounter{itemno} \arabic{itemno} &   &  & $\square$& \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno} & &  & $\square$& \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno}   & &  & $\square$&  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno}   & &  & $\square$&  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno}   & &  & $\square$&  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno}   & &  & $\square$&  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno}   & &  & $\square$&  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno}   & &  & $\square$&  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno}   & &  & $\square$&  \\
-        \hline
-        \stepcounter{itemno} \arabic{itemno}   & &  & $\square$&  \\
+        \input{Inc/execution.tex} % Include content from external file
         \hlineB{3}
     \end{longtable}
 }
