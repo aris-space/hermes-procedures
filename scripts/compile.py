@@ -30,7 +30,7 @@ def compile_latex_to_pdf(tex_file_path):
 
 if __name__ == "__main__":
     # Path to the .tex file you want to compile
-    tex_file_path = "hermes-procedures/procedures/assembly/test/main.tex"  # Replace with your .tex file path
+    tex_file_path = r"C:\Users\abegg\OneDrive\Dokumente\GitHub\hermes-procedures\procedures\assembly\test\main.tex"  # Replace with your .tex file path
 
     # Compile the .tex file
     compile_latex_to_pdf(tex_file_path)
