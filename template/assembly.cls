@@ -1,4 +1,4 @@
-\ProvidesClass{hermes-procedure}
+\ProvidesClass{assembly}
 \LoadClass[a4paper,12pt]{article}
 
 \RequirePackage{style} % Include the .sty file
