@@ -11,7 +11,7 @@
         % Title
         \large \textbf{HER\_[XXX]\_[ProcedureName]\_[00X]}
         % Right Logo
-        \hfill \includegraphics[height=1.5cm]{ARIS_space_to_grow_LOGO-black.png}
+        \hfill \includegraphics[height=1.5cm]{global-assets/ARIS_space_to_grow_LOGO-black.png}
     \end{center}
     \vspace{1cm} % Adjust the vertical space after the title
     
