@@ -1,7 +1,7 @@
 \ProvidesClass{assembly}
 \LoadClass[a4paper,12pt]{article}
 
-\RequirePackage{style} % Include the .sty file
+\RequirePackage{../style} % Include the .sty file
 
 \makeatletter
 \def\maketitle{
@@ -29,7 +29,12 @@
 
 % Command to add a row to a table
 \newcommand{\addrow}[4]{%
-    \stepcounter{itemno} \arabic{itemno} & #1 & #2 & $\square$ & #3 \\ 
+    \stepcounter{itemno}%
+    \arabic{itemno} &
+    \ifx#1\empty \relax \else #1 \fi &
+    \ifx#2\empty \relax \else #2 \fi &
+    $\square$ &
+    \ifx#3\empty \relax \else #3 \fi \\
     \hline
 }
 
@@ -61,7 +66,6 @@
     \end{longtable}
 }
 
-
 % Execution Table
 \newcommand{\executiontable}{%
     \setcounter{itemno}{0} % Reset counter
@@ -90,4 +94,3 @@
         \hline
     \end{tabular}
 }
-
